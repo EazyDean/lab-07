@@ -1,3 +1,13 @@
+/*
+ * Replication prompt 2: Set up the Android project
+ * Source: OpenAI Codex conversation; retrospective replication instructions.
+ *
+ * Create a Kotlin Jetpack Compose Android project named lab-7 in this repository,
+ * using package com.example.lab_7. Include the Gradle wrapper, configure compatible
+ * dependencies, and add navigation-compose:2.9.8. Ignore build outputs, IDE files,
+ * and local.properties.
+ */
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.plugin.compose")

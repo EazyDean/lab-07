@@ -14,6 +14,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
+/*
+ * Replication prompt 4: Build the home screen
+ * Source: OpenAI Codex conversation; retrospective replication instructions.
+ *
+ * Implement HomeScreen with the centered title “FormulaZero Home” and buttons for
+ * “Upcoming Races” and “Drivers.” Make each button navigate to its screen. Use test
+ * tags raceButton and driversButton.
+ */
+
 @Composable
 fun HomeScreen(navController: NavController) {
     Column(

@@ -19,6 +19,16 @@ class FormulaZeroTest {
     @get:Rule
     val composeTestRule = createAndroidComposeRule<MainActivity>()
 
+    /*
+     * Replication prompt 7: Test the races flow
+     * Source: OpenAI Codex conversation; retrospective replication instructions.
+     *
+     * Configure Compose instrumented testing. Create FormulaZeroTest.kt under
+     * androidTest using createAndroidComposeRule<MainActivity>().
+     *
+     * Add a test that opens Upcoming Races, enters Canada, adds it, verifies it is
+     * displayed and the input is cleared, presses Back, and verifies “FormulaZero Home.”
+     */
     @Test
     fun navigate_to_races_add_race_and_return_home() {
         composeTestRule.onNodeWithTag("raceButton").performClick()
@@ -31,6 +41,15 @@ class FormulaZeroTest {
         composeTestRule.onNodeWithText("FormulaZero Home").assertIsDisplayed()
     }
 
+    /*
+     * Replication prompt 8: Test the drivers flow
+     * Source: OpenAI Codex conversation; retrospective replication instructions.
+     *
+     * Add an instrumented test that opens Drivers, adds Lewis Hamilton and Max
+     * Verstappen, and verifies both appear. Clear all drivers and verify both disappear
+     * and the list is empty. Add Charles Leclerc to confirm adding still works. Press
+     * Back and verify the home screen.
+     */
     @Test
     fun navigate_to_drivers_add_clear_and_return_home() {
         composeTestRule.onNodeWithTag("driversButton").performClick()
@@ -59,6 +78,13 @@ class FormulaZeroTest {
         composeTestRule.onNodeWithText("FormulaZero Home").assertIsDisplayed()
     }
 
+    /*
+     * Replication prompt 9: Test blank entries
+     * Source: OpenAI Codex conversation; retrospective replication instructions.
+     *
+     * Add an instrumented test that submits whitespace-only input on both the races
+     * and drivers screens. Verify neither list receives an entry.
+     */
     @Test
     fun blank_entries_are_not_added() {
         composeTestRule.onNodeWithTag("raceButton").performClick()

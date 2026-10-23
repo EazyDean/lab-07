@@ -24,6 +24,22 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
+/*
+ * Replication prompt 5: Build the races screen
+ * Source: OpenAI Codex conversation; retrospective replication instructions.
+ *
+ * Implement UpcomingRacesScreen with:
+ * - A Back button that returns home.
+ * - The title “Upcoming Races.”
+ * - A text field labeled “Race Location.”
+ * - An Add button.
+ * - A LazyColumn displaying added locations.
+ *
+ * Use remember and mutableStateListOf. Reject blank input, trim added locations,
+ * and clear the input after adding. Use test tags backButton, locationInput,
+ * addRaceButton, and raceList. Keep controls within the available screen width.
+ */
+
 @Composable
 fun UpcomingRacesScreen(navController: NavController) {
     var location by remember { mutableStateOf("") }

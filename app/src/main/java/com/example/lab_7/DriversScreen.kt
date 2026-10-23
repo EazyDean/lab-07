@@ -24,6 +24,24 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
+/*
+ * Replication prompt 6: Build the drivers screen
+ * Source: OpenAI Codex conversation; retrospective replication instructions.
+ *
+ * Implement DriversScreen with:
+ * - A Back button that returns home.
+ * - The title “FormulaZero Drivers.”
+ * - A text field labeled “Driver Name.”
+ * - An Add button.
+ * - A LazyColumn displaying added drivers.
+ * - A “Clear All Drivers” button.
+ *
+ * Use in-memory Compose state. Reject blank input, trim names, and clear the input
+ * after adding. Clearing must remove every driver and allow subsequent additions.
+ * Use test tags backButton, driverInput, addDriverButton, driverList, and
+ * clearDriversButton.
+ */
+
 @Composable
 fun DriversScreen(navController: NavController) {
     var driver by remember { mutableStateOf("") }

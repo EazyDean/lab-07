@@ -9,6 +9,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
+/*
+ * Replication prompt 3: Create navigation
+ * Source: OpenAI Codex conversation; retrospective replication instructions.
+ *
+ * Create FormulaZeroApp.kt, HomeScreen.kt, UpcomingRacesScreen.kt, and
+ * DriversScreen.kt. Use rememberNavController and NavHost with routes home, races,
+ * and drivers. Start at home. Update MainActivity to display FormulaZeroApp inside
+ * Lab7Theme.
+ */
+
 @Composable
 fun FormulaZeroApp() {
     val navController = rememberNavController()
